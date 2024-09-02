@@ -22,13 +22,14 @@ class ReactionService {
         }
     }
 
-    public async findByAuthor(commentId: string, authorId: string): Promise<CommentDocument | null> {
+    public async findByCommentId(commentId: string): Promise<ReactionInput[] | null> {
         try {
-            // Encuentra el comentario con una reacción específica por autor
-            return await CommentModel.findOne({
-                _id: commentId,
-                'reactions.author': authorId
-            });
+            const comment = await CommentModel.findById(commentId).select('reactions').exec();
+            if (!comment) {
+                throw new Error("Comment not found");
+            }
+            
+            return comment.reactions || null;
         } catch (error) {
             throw error;
         }
@@ -36,7 +37,6 @@ class ReactionService {
 
     public async update(commentId: string, authorId: string, reactionType: string): Promise<CommentDocument | null> {
         try {
-            // Encuentra y actualiza el tipo de reacción de un autor específico
             const comment = await CommentModel.findOneAndUpdate(
                 { _id: commentId, 'reactions.author': authorId },
                 { $set: { 'reactions.$.type': reactionType } },
@@ -50,7 +50,6 @@ class ReactionService {
 
     public async deleteById(commentId: string, authorId: string): Promise<CommentDocument | null> {
         try {
-            // Encuentra el comentario y elimina la reacción de un autor específico
             const comment = await CommentModel.findByIdAndUpdate(
                 commentId,
                 { $pull: { reactions: { author: authorId } } },
@@ -61,6 +60,7 @@ class ReactionService {
             throw error;
         }
     }
+    
 }
 
 export default new ReactionService();

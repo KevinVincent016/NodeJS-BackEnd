@@ -6,5 +6,5 @@ export const reactionRouter = express.Router();
 
 reactionRouter.post('/', auth, ReactionController.create);
 reactionRouter.put('/reactions', auth, ReactionController.update);
-reactionRouter.delete('/reactions', auth, ReactionController.delete);
-reactionRouter.get('/reactions/:commentId', auth, ReactionController.getByAuthor);
+reactionRouter.delete('/:commentId/:recId', auth, ReactionController.delete);
+reactionRouter.get('/reactions/:commentId', auth, ReactionController.getReactionsByCommentId);

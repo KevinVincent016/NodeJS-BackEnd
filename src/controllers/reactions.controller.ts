@@ -34,8 +34,13 @@ class ReactionController {
 
     public async delete(req: Request, res: Response) {
         try {
-            const { commentId } = req.body;
+            const commentId = req.params.commentId;
             const authorId = req.body.loggedUser.user_id;
+
+            console.log("............");
+            console.log(commentId);
+            console.log("............");
+            console.log(authorId);
 
             const comment = await reactionService.deleteById(commentId, authorId);
             res.status(200).json(comment);
@@ -44,13 +49,14 @@ class ReactionController {
         }
     }
 
-    public async getByAuthor(req: Request, res: Response) {
+    public async getReactionsByCommentId(req: Request, res: Response) {
         try {
-            const { commentId } = req.params;
-            const authorId = req.body.loggedUser.user_id;
-
-            const comment = await reactionService.findByAuthor(commentId, authorId);
-            res.json(comment);
+            const commentId = req.params.commentId;
+            const reactions = await reactionService.findByCommentId(commentId);
+            if (!reactions) {
+                return res.status(404).json({ message: 'No reactions found for this comment' });
+            }
+            res.json(reactions);
         } catch (error) {
             res.status(500).json(error);
         }
