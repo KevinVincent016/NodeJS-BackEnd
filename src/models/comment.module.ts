@@ -15,7 +15,7 @@ export interface CommentDocument extends CommentInput, mongoose.Document {
 const commentSchema = new mongoose.Schema(
     {
         content: { type: String, required: true },
-        author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+        author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
         parentComment: { type: mongoose.Schema.Types.ObjectId, ref: 'Comment' },
     },
     { timestamps: true, collection: 'comments' }

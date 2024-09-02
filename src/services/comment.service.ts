@@ -26,6 +26,14 @@ class CommentService {
         }
     }
 
+    public async findByComment(commentId: string): Promise<CommentDocument[]> {
+        try {
+            return await CommentModel.find({ parentComment: commentId }).exec();
+        } catch (error) {
+            throw error;
+        }
+    }
+
     public async update(id: string, commentInput: Partial<CommentInput>): Promise<CommentDocument | null> {
         try {
             return await CommentModel.findByIdAndUpdate(id, commentInput, { new: true }).exec();

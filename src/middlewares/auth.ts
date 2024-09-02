@@ -11,8 +11,11 @@ const auth = async(req: Request, res: Response, next: NextFunction) => {
             token = token.replace("Bearer ", "");
             const decoded: any = jwt.verify(token, process.env.JWT_SECRET || "secret");
             req.body.loggedUser = decoded;
+            req.params.cId = req.params.id;
             req.params.id = decoded.user_id;
             req.body.loggedUserRole = decoded.role;
+            console.log(req.body.loggedUser)
+
             next()
         }
     } catch (error) {

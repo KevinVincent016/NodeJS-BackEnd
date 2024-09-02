@@ -18,3 +18,6 @@ commentRouter.get('/:id', auth, commentController.getById);
 
 // Obtener todos los comentarios de un autor
 commentRouter.get('/author/:authorId', auth, commentController.getByAuthor);
+
+// Obtener las respuestas a un comentario
+commentRouter.get('/replies/:id', auth, commentController.getByComment);
