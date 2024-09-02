@@ -48,11 +48,11 @@ class ReactionService {
         }
     }
 
-    public async deleteById(commentId: string, authorId: string): Promise<CommentDocument | null> {
+    public async deleteById(commentId: string, reactionId: string, authorId: string): Promise<CommentDocument | null> {
         try {
             const comment = await CommentModel.findByIdAndUpdate(
                 commentId,
-                { $pull: { reactions: { author: authorId } } },
+                { $pull: { reactions: { _id: reactionId, author: authorId } } },
                 { new: true }
             );
             return comment;

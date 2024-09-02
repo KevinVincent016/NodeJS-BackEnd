@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import reactionService from '../services/reaction.service';
 import { ReactionInput } from '../models/comment.module';
+import { error } from 'console';
 
 class ReactionController {
     public async create(req: Request, res: Response) {
@@ -35,14 +36,17 @@ class ReactionController {
     public async delete(req: Request, res: Response) {
         try {
             const commentId = req.params.commentId;
+            const reactionId = req.params.recId;
             const authorId = req.body.loggedUser.user_id;
 
             console.log("............");
             console.log(commentId);
             console.log("............");
+            console.log(reactionId);
+            console.log("............");
             console.log(authorId);
 
-            const comment = await reactionService.deleteById(commentId, authorId);
+            const comment = await reactionService.deleteById(commentId, reactionId, authorId);
             res.status(200).json(comment);
         } catch (error) {
             res.status(500).json(error);
