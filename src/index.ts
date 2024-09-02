@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import {router} from './routes/users.router';
 import {commentRouter} from './routes/comments.router';
 import {db} from './config/db';
+import { reactionRouter } from './routes/reaction.router';
 
 
 const app: Express = express()
@@ -14,6 +15,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.use('/api/users', router)
 app.use('/api/comments', commentRouter)
+app.use('/api/reactions', reactionRouter)
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello World');
