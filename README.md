@@ -71,13 +71,14 @@ En el apartado "Docs" se incluye un JSON de Postman que tiene pruebas en un ento
 - JWT: Para la autenticación y autorización segura de los usuarios.
 
 ## Funcionalidades Implementadas
-- Autenticación y Autorización: Sistema de autenticación mediante JWT, con roles de usuario (superadmin, usuario regular).
+- Autenticación y Autorización: Sistema de autenticación mediante JWT, con roles de usuario (superadmin, regular).
 - Gestión de Usuarios: CRUD completo para usuarios, con restricciones basadas en roles.
 - Gestión de Comentarios: CRUD completo para comentarios, incluyendo la funcionalidad de hilos de discusión.
 - Reacciones a Comentarios: Sistema para que los usuarios reaccionen a los comentarios.
 
 ## Despliegue
-(Pendiente)
+Desplegado con Railway
+`nodejs-backend-production-2067.up.railway.app`
 
 ## Pruebas
 Se incluye un archivo JSON de Postman en el proyecto (NodeJS BackEnd.postman_collection.json) que contiene pruebas de cada una de las funcionalidades de la API.
@@ -94,4 +95,4 @@ Este archivo contiene todas las solicitudes y scripts de test utilizados para va
 
 
 ## Limitaciones y Dificultades
-(Pendiente)
+Encontre ciertas dificultades al momento de decidir si hacer tanto las respuestas como las reacciones embebidas o referenciadas, en el proyecto se uso ambos metodos, respuestas referenciadas y reacciones embebidas, el manejar las reacciones embebidas trajo complicaciones al momento de hacer las consultas.
