@@ -24,9 +24,17 @@ class ReactionController {
     public async update(req: Request, res: Response) {
         try {
             const { commentId, type } = req.body;
+            const reactionId = req.params.recId;
             const authorId = req.body.loggedUser.user_id;
 
-            const comment = await reactionService.update(commentId, authorId, type);
+            console.log("............");
+            console.log(commentId);
+            console.log("............");
+            console.log(reactionId);
+            console.log("............");
+            console.log(authorId);
+
+            const comment = await reactionService.update(commentId, authorId, type, reactionId);
             res.json(comment);
         } catch (error) {
             res.status(500).json(error);

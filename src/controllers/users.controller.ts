@@ -35,9 +35,9 @@ class UserController{
 
     public async update(req: Request, res: Response) {
         try {
-            const user: UserDocument | null = await userService.update(req.params.id, req.body as UserInput)
+            const user: UserDocument | null = await userService.update(req.params.uptId, req.body as UserInput)
             if(!user)
-                res.status(404).json({error:"not found", message:`User with id ${req.params.id} was not found`})
+                res.status(404).json({error:"not found", message:`User with id ${req.params.uptId} was not found`})
             res.json(user);
         } catch (error) {
             res.status(500).json(error);
@@ -77,7 +77,7 @@ class UserController{
 
     public async delete(req: Request, res: Response) {
         try {
-            const user: UserDocument | null = await userService.deleteById(req.params.id);
+            const user: UserDocument | null = await userService.deleteById(req.params.delId);
             res.status(200).json(user);
         } catch (error) {
             res.status(500).json(error);

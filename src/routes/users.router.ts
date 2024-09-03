@@ -28,7 +28,7 @@ router.get('/:id/group/:groupId', (req: Request, res: Response) => {
 });
 
 //Actualizar la informacion de un usuario
-router.put('/:id', auth, validateRol(['superadmin']), usersController.update);
+router.put('/:uptId', auth, validateRol(['superadmin']), usersController.update);
 
 //Eliminar un usuario
-router.delete('/:id', auth, validateRol(['superadmin']), usersController.delete);
+router.delete('/:delId', auth, validateRol(['superadmin']), usersController.delete);

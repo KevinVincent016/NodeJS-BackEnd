@@ -35,11 +35,16 @@ class ReactionService {
         }
     }
 
-    public async update(commentId: string, authorId: string, reactionType: string): Promise<CommentDocument | null> {
+    public async update(commentId: string, authorId: string, reactionType: string, reactionId: string): Promise<CommentDocument | null> {
         try {
             const comment = await CommentModel.findOneAndUpdate(
-                { _id: commentId, 'reactions.author': authorId },
-                { $set: { 'reactions.$.type': reactionType } },
+                {
+                    _id: commentId,
+                    reactions: { $elemMatch: { _id: reactionId, author: authorId } }
+                },
+                {
+                    $set: { 'reactions.$.type': reactionType }
+                },
                 { new: true }
             );
             return comment;

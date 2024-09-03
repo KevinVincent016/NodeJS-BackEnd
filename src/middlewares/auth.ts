@@ -13,8 +13,8 @@ const auth = async(req: Request, res: Response, next: NextFunction) => {
             req.params.cId = req.params.id;
             req.params.id = decoded.user_id;
             req.body.loggedUserRole = decoded.role;
-            console.log(req.body.loggedUser.user_id)
-
+            console.log(req.body.loggedUser.user_id);
+            console.log(req.params.delId);
             next()
         }
     } catch (error) {
