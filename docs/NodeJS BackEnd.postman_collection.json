@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "7421cdcf-e110-43c3-afa4-1f6b9b112281",
 		"name": "NodeJS BackEnd",
-		"description": "Todas las rutas para probar:  \n**USUARIOS**\n\n- **Login**\n    \n\n[http://localhost:3000/api/users/login](http://localhost:3000/api/users/login)\n\nAuth: None\n\nBody:\n\n{\n\nemail : \"registered email\",\n\npassword : \"registered password\"\n\n}\n\n- **Create User**\n    \n\n[http://localhost:3000/api/users/login](http://localhost:3000/api/users/login)\n\nAuth: Nedded (Restriccion: tiene que ser un _**superadmin**_ para crear usuarios)\n\nBody:\n\n{\n\nname : \"user name\",\n\nemail : \"user email\",\n\npassword : \"user password\",\n\nrol : \"user rol, este campo es opcional, rol por defecto -> regular\"\n\n}\n\n- **Get User**\n    \n\n[http://localhost:3000/api/users/](http://localhost:3000/api/users/)\n\nAuth: Nedded\n\nBody: None\n\n- **Get User Info (current logged user)**\n    \n\n[http://localhost:3000/api/users/profile](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Get User By ID**\n    \n\n[http://localhost:3000/api/users/{id}](http://localhost:3000/api/users/{idd)\n\nAuth: Nedded\n\nBody: None\n\n- **Update User**\n    \n\n[http://localhost:3000/api/users/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: tiene que ser un _**superadmin**_ para crear usuarios)\n\nBody:\n\n{\n\nname : \"new name\",\n\npassword: \"new password\",\n\nrol : \"new rol\"\n\n}\n\n- **Delete User**\n    \n\n[http://localhost:3000/api/users/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: tiene que ser un _**superadmin**_ para crear usuarios)\n\nBody: None\n\n**COMENTARIOS**\n\n- **Create Commentary**\n    \n\n[http://localhost:3000/api/comments/](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody:\n\n{\n\ncontent : \"content of your commentary\"\n\n}\n\n- **Get Commentary by ID**\n    \n\n[http://localhost:3000/api/comments/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Get Commentary by Author**\n    \n\n[http://localhost:3000/api/comments/author/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Get Commentary Replies**\n    \n\n[http://localhost:3000/api/comments/replies/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Update Commentary**\n    \n\n[http://localhost:3000/api/comments/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: El usuario logeado debe ser el autor del comentario que va a modificar)\n\nBody:\n\n{\n\ncontent : \"New content\"\n\n}\n\n- **Delete**\n    \n\n[http://localhost:3000/api/comments/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: El usuario logeado debe ser el autor del comentario que va a eliminar)\n\nBody: None\n\n**REACCIONES**\n\n- **Create Reaction**\n    \n\n[http://localhost:3000/api/reactions/](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody:\n\n{\n\ncommentId : \"Id del comentario a responder\"\n\ntype : \"Me gusta | Amor | En desacuerdo\"\n\n}\n\n- **Get Reaction by CommentID**\n    \n\n[http://localhost:3000/api/reactions/reactions/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Update Reaction**\n    \n\n[http://localhost:3000/api/reactions/](http://localhost:3000/api/users/profile)update/{reactionId}\n\nAuth: Nedded (Restriccion: el usuario logeado debe ser el autor de la reaccion a modificar)\n\nBody:\n\n{\n\ncommentId : \"Id del comentario\"\n\ntype : \"Nueva reaccion. Me gusta | Amor | En desacuerdo\"\n\n}\n\n- **Delete Reaction**\n    \n\n[http://localhost:3000/api/{commentId}/{reactionId}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None",
+		"description": "Todas las rutas para probar:  \n**USUARIOS**\n\n- **Login**\n    \n\n[http://localhost:3000/api/users/login](http://localhost:3000/api/users/login)\n\nAuth: None\n\nBody:\n\n{\n\nemail : \"registered email\",\n\npassword : \"registered password\"\n\n}\n\n- **Create User**\n    \n\n[http://localhost:3000/api/users/](http://localhost:3000/api/users/login)\n\nAuth: Nedded (Restriccion: tiene que ser un _**superadmin**_ para crear usuarios)\n\nBody:\n\n{\n\nname : \"user name\",\n\nemail : \"user email\",\n\npassword : \"user password\",\n\nrol : \"user rol, este campo es opcional, rol por defecto -> regular\"\n\n}\n\n- **Get User**\n    \n\n[http://localhost:3000/api/users/](http://localhost:3000/api/users/)\n\nAuth: Nedded\n\nBody: None\n\n- **Get User Info (current logged user)**\n    \n\n[http://localhost:3000/api/users/profile](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Get User By ID**\n    \n\n[http://localhost:3000/api/users/{id}](http://localhost:3000/api/users/{idd)\n\nAuth: Nedded\n\nBody: None\n\n- **Update User**\n    \n\n[http://localhost:3000/api/users/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: tiene que ser un _**superadmin**_ para crear usuarios)\n\nBody:\n\n{\n\nname : \"new name\",\n\npassword: \"new password\",\n\nrol : \"new rol\"\n\n}\n\n- **Delete User**\n    \n\n[http://localhost:3000/api/users/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: tiene que ser un _**superadmin**_ para crear usuarios)\n\nBody: None\n\n**COMENTARIOS**\n\n- **Create Commentary**\n    \n\n[http://localhost:3000/api/comments/](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody:\n\n{\n\ncontent : \"content of your commentary\"\n\n}\n\n- **Get Commentary by ID**\n    \n\n[http://localhost:3000/api/comments/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Get Commentary by Author**\n    \n\n[http://localhost:3000/api/comments/author/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Get Commentary Replies**\n    \n\n[http://localhost:3000/api/comments/replies/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Update Commentary**\n    \n\n[http://localhost:3000/api/comments/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: El usuario logeado debe ser el autor del comentario que va a modificar)\n\nBody:\n\n{\n\ncontent : \"New content\"\n\n}\n\n- **Delete**\n    \n\n[http://localhost:3000/api/comments/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded (Restriccion: El usuario logeado debe ser el autor del comentario que va a eliminar)\n\nBody: None\n\n**REACCIONES**\n\n- **Create Reaction**\n    \n\n[http://localhost:3000/api/reactions/](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody:\n\n{\n\ncommentId : \"Id del comentario a responder\"\n\ntype : \"Me gusta | Amor | En desacuerdo\"\n\n}\n\n- **Get Reaction by CommentID**\n    \n\n[http://localhost:3000/api/reactions/reactions/{id}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None\n\n- **Update Reaction**\n    \n\n[http://localhost:3000/api/reactions/](http://localhost:3000/api/users/profile)update/{reactionId}\n\nAuth: Nedded (Restriccion: el usuario logeado debe ser el autor de la reaccion a modificar)\n\nBody:\n\n{\n\ncommentId : \"Id del comentario\"\n\ntype : \"Nueva reaccion. Me gusta | Amor | En desacuerdo\"\n\n}\n\n- **Delete Reaction**\n    \n\n[http://localhost:3000/api/reactions/{commentId}/{reactionId}](http://localhost:3000/api/users/profile)\n\nAuth: Nedded\n\nBody: None",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32947797"
 	},
@@ -35,7 +35,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"kef@gmail.com\",\r\n    \"password\" : \"kef123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "302"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12e-YG4Ko4t6+LUc0QqgRcOhn5cMGtQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:16:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"kef@gmail.com\",\n    \"name\": \"Kef\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwMTk5LCJleHAiOjE3MjUzODA0OTl9.3Oe5hy8-uU4dFA1gz1ddqluY9aU2goq5Vc_97rvPm2E\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Crear Usuario",
@@ -45,7 +110,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzY5OTYxLCJleHAiOjE3MjUzNzAyNjF9.vC0DdpQckscLc-C-x0jRfcNevAmYw9adfa2urLnF1Qo",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwMTk5LCJleHAiOjE3MjUzODA0OTl9.3Oe5hy8-uU4dFA1gz1ddqluY9aU2goq5Vc_97rvPm2E",
 							"type": "string"
 						}
 					]
@@ -75,7 +140,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Crear Usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Usuario Testing\",\r\n    \"email\" : \"test@gmail.com\",\r\n    \"password\" : \"test2024\",\r\n    \"rol\" : \"superadmin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "263"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"107-Z4O/SnArgotl3I6+5jl+fUG9hGo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:17:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Usuario Testing\",\n    \"email\": \"test@gmail.com\",\n    \"password\": \"$2b$10$9Zcn4bWQ4JqfaseE9ZjTbuPHEPe8p.CVCDh2vAWN3/l1ARcGupwwW\",\n    \"rol\": \"superadmin\",\n    \"_id\": \"66d736876ea09902b6cd8b83\",\n    \"createdAt\": \"2024-09-03T16:17:11.192Z\",\n    \"updatedAt\": \"2024-09-03T16:17:11.192Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Obtener Usuarios",
@@ -85,7 +215,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzY5OTYxLCJleHAiOjE3MjUzNzAyNjF9.vC0DdpQckscLc-C-x0jRfcNevAmYw9adfa2urLnF1Qo",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwMTk5LCJleHAiOjE3MjUzODA0OTl9.3Oe5hy8-uU4dFA1gz1ddqluY9aU2goq5Vc_97rvPm2E",
 							"type": "string"
 						}
 					]
@@ -106,7 +236,63 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener Usuarios",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1547"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"60b-snWoBy71UyElpNVkRdObLKy0MUA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:17:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66d4ff342e2e7009ca4a9063\",\n        \"name\": \"Kef2\",\n        \"email\": \"kef2@gmail.com\",\n        \"password\": \"$2b$10$KPaGNZA/TDFX0dRdPTnXyuLU7mnE04R9KXPTY6KLPPAVS/qwWYSEW\",\n        \"rol\": \"regular\",\n        \"createdAt\": \"2024-09-01T23:56:36.402Z\",\n        \"updatedAt\": \"2024-09-01T23:56:36.402Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d51ef7d5d046a939f66834\",\n        \"name\": \"Kefsito\",\n        \"email\": \"kef3@gmail.com\",\n        \"password\": \"$2b$10$NmweDJQGBILxqTbOKCYUHuMASl1swdHhYS/hPfE0fVcNbF1dtxVz6\",\n        \"rol\": \"regular\",\n        \"createdAt\": \"2024-09-02T02:12:07.542Z\",\n        \"updatedAt\": \"2024-09-02T02:12:07.542Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d70d105f01426f640f2e58\",\n        \"name\": \"Kefsito ADMIN\",\n        \"email\": \"kef4@gmail.com\",\n        \"password\": \"$2b$10$gEES8poePp1zx.39nM4.r.GSdJ3tB9RpVLCSt4x8d/jsN8zDbEiK6\",\n        \"rol\": \"superadmin\",\n        \"createdAt\": \"2024-09-03T13:20:16.719Z\",\n        \"updatedAt\": \"2024-09-03T13:20:16.719Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d70d795f01426f640f2e5d\",\n        \"name\": \"Kef\",\n        \"email\": \"kef@gmail.com\",\n        \"password\": \"$2b$10$8NXQ99g/dVcaEK3/LvhXm.N7h.2DYsIah0jI8d.K6iA.yUmFQX9Ou\",\n        \"rol\": \"superadmin\",\n        \"createdAt\": \"2024-09-03T13:22:01.551Z\",\n        \"updatedAt\": \"2024-09-03T13:22:01.551Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d70eae4d7cb4472d5c1c2a\",\n        \"name\": \"Usuario Testing\",\n        \"email\": \"Tester@gmail.com\",\n        \"password\": \"$2b$10$y84mgN7hX1Dd9dxiV75MwubYuqo6Qy3mACH7WXVcBDru6QvdAZQxS\",\n        \"rol\": \"superadmin\",\n        \"createdAt\": \"2024-09-03T13:27:10.363Z\",\n        \"updatedAt\": \"2024-09-03T13:31:07.110Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d736876ea09902b6cd8b83\",\n        \"name\": \"Usuario Testing\",\n        \"email\": \"test@gmail.com\",\n        \"password\": \"$2b$10$9Zcn4bWQ4JqfaseE9ZjTbuPHEPe8p.CVCDh2vAWN3/l1ARcGupwwW\",\n        \"rol\": \"superadmin\",\n        \"createdAt\": \"2024-09-03T16:17:11.192Z\",\n        \"updatedAt\": \"2024-09-03T16:17:11.192Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Obtener Usuario Logeado",
@@ -116,7 +302,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzY5OTYxLCJleHAiOjE3MjUzNzAyNjF9.vC0DdpQckscLc-C-x0jRfcNevAmYw9adfa2urLnF1Qo",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwMTk5LCJleHAiOjE3MjUzODA0OTl9.3Oe5hy8-uU4dFA1gz1ddqluY9aU2goq5Vc_97rvPm2E",
 							"type": "string"
 						}
 					]
@@ -137,7 +323,63 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener Usuario Logeado",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "250"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fa-aRnKv9txOt2JZFRI6ejC5BaOpSg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:18:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d70d795f01426f640f2e5d\",\n    \"name\": \"Kef\",\n    \"email\": \"kef@gmail.com\",\n    \"password\": \"$2b$10$8NXQ99g/dVcaEK3/LvhXm.N7h.2DYsIah0jI8d.K6iA.yUmFQX9Ou\",\n    \"rol\": \"superadmin\",\n    \"createdAt\": \"2024-09-03T13:22:01.551Z\",\n    \"updatedAt\": \"2024-09-03T13:22:01.551Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Obtener Usuario Por ID",
@@ -147,7 +389,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNTFmMTFkNWQwNDZhOTM5ZjY2ODM3IiwiZW1haWwiOiJUZXN0ZXJAZ21haWwuY29tIiwibmFtZSI6IktlZnNpdG8gQURNSU4iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNTMyNTc1OCwiZXhwIjoxNzI1MzI2MDU4fQ.T9LkiJ-0pUSnYPywp2Bo0ovV3PAlaDNtFFLRINlFOsY",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwMTk5LCJleHAiOjE3MjUzODA0OTl9.3Oe5hy8-uU4dFA1gz1ddqluY9aU2goq5Vc_97rvPm2E",
 							"type": "string"
 						}
 					]
@@ -168,7 +410,63 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener Usuario Por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/66d70eae4d7cb4472d5c1c2a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"66d70eae4d7cb4472d5c1c2a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "265"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"109-4zKBDjivgvNANvYxuR0C1Srfpr4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:19:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d70eae4d7cb4472d5c1c2a\",\n    \"name\": \"Usuario Testing\",\n    \"email\": \"Tester@gmail.com\",\n    \"password\": \"$2b$10$y84mgN7hX1Dd9dxiV75MwubYuqo6Qy3mACH7WXVcBDru6QvdAZQxS\",\n    \"rol\": \"superadmin\",\n    \"createdAt\": \"2024-09-03T13:27:10.363Z\",\n    \"updatedAt\": \"2024-09-03T13:31:07.110Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Actualizar Usuario",
@@ -178,7 +476,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcwMjUwLCJleHAiOjE3MjUzNzA1NTB9.vmzWdhNGErYN8dLuk2gGvwX1ezCZsoaBsPL8A_UsoQU",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNDIxLCJleHAiOjE3MjUzODA3MjF9.2OHGvNeQs5hXa0sxUTZJ7PkzD9PaXmD_8L3uwNS-Eo4",
 							"type": "string"
 						}
 					]
@@ -208,7 +506,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Actualizar Usuario",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"Tester@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/66d70eae4d7cb4472d5c1c2a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"66d70eae4d7cb4472d5c1c2a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "265"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"109-YTsMzuOcx4/+m1J1n/Rzb+QcWHM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:20:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d70eae4d7cb4472d5c1c2a\",\n    \"name\": \"Usuario Testing\",\n    \"email\": \"Tester@gmail.com\",\n    \"password\": \"$2b$10$y84mgN7hX1Dd9dxiV75MwubYuqo6Qy3mACH7WXVcBDru6QvdAZQxS\",\n    \"rol\": \"superadmin\",\n    \"createdAt\": \"2024-09-03T13:27:10.363Z\",\n    \"updatedAt\": \"2024-09-03T16:20:38.317Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Eliminar Usuario",
@@ -218,7 +581,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcwMjUwLCJleHAiOjE3MjUzNzA1NTB9.vmzWdhNGErYN8dLuk2gGvwX1ezCZsoaBsPL8A_UsoQU",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNDIxLCJleHAiOjE3MjUzODA3MjF9.2OHGvNeQs5hXa0sxUTZJ7PkzD9PaXmD_8L3uwNS-Eo4",
 							"type": "string"
 						}
 					]
@@ -226,7 +589,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/users/66be88132f517d71d8215d9f",
+					"raw": "http://localhost:3000/api/users/66d70eae4d7cb4472d5c1c2a",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -235,11 +598,67 @@
 					"path": [
 						"api",
 						"users",
-						"66be88132f517d71d8215d9f"
+						"66d70eae4d7cb4472d5c1c2a"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Eliminar Usuario",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/66d70eae4d7cb4472d5c1c2a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"66d70eae4d7cb4472d5c1c2a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "265"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"109-YTsMzuOcx4/+m1J1n/Rzb+QcWHM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:21:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d70eae4d7cb4472d5c1c2a\",\n    \"name\": \"Usuario Testing\",\n    \"email\": \"Tester@gmail.com\",\n    \"password\": \"$2b$10$y84mgN7hX1Dd9dxiV75MwubYuqo6Qy3mACH7WXVcBDru6QvdAZQxS\",\n    \"rol\": \"superadmin\",\n    \"createdAt\": \"2024-09-03T13:27:10.363Z\",\n    \"updatedAt\": \"2024-09-03T16:20:38.317Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Crear Comentario",
@@ -249,7 +668,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcxMDc0LCJleHAiOjE3MjUzNzEzNzR9.HUpbOg8KZ4fD88wJsMy_0egexz7CbG5Y3gmmmzJDuk4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNjM5LCJleHAiOjE3MjUzODA5Mzl9.qQtU8pb3EPRmvlyNosZ5zbupvOkqms9PLHzKHlD8aMk",
 							"type": "string"
 						}
 					]
@@ -279,7 +698,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Crear Comentario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"Tercer Comentario de testeo!!!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6-3SCXUTrXmi+SQugXCKzEIY7Q4+8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:24:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": \"Tercer Comentario de testeo!!!\",\n    \"author\": \"66d70d795f01426f640f2e5d\",\n    \"_id\": \"66d7382d7479da2f19bb862c\",\n    \"reactions\": [],\n    \"createdAt\": \"2024-09-03T16:24:13.457Z\",\n    \"updatedAt\": \"2024-09-03T16:24:13.457Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Crear Respuesta A Comentario",
@@ -289,7 +773,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcwNjE4LCJleHAiOjE3MjUzNzA5MTh9._so9bN7JlpCCBQMbixWf32-a1dpNEFPEyIWd-VFyKYM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNjM5LCJleHAiOjE3MjUzODA5Mzl9.qQtU8pb3EPRmvlyNosZ5zbupvOkqms9PLHzKHlD8aMk",
 							"type": "string"
 						}
 					]
@@ -298,7 +782,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"content\" : \"Respuesta al comentario de testeo\",\r\n    \"parentComment\" : \"66d70fe0c9f1acf7fdb2fd19\"\r\n}",
+					"raw": "{\r\n    \"content\" : \"Respuesta al comentario de testeo\",\r\n    \"parentComment\" : \"66d7382d7479da2f19bb862c\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -319,7 +803,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Crear Respuesta A Comentario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"Respuesta al comentario de testeo\",\r\n    \"parentComment\" : \"66d7382d7479da2f19bb862c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "260"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"104-I+3DqsfuiQphid3D4fWPx517FB4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:25:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": \"Respuesta al comentario de testeo\",\n    \"author\": \"66d70d795f01426f640f2e5d\",\n    \"parentComment\": \"66d7382d7479da2f19bb862c\",\n    \"_id\": \"66d7385f7479da2f19bb862e\",\n    \"reactions\": [],\n    \"createdAt\": \"2024-09-03T16:25:03.251Z\",\n    \"updatedAt\": \"2024-09-03T16:25:03.251Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Obtener Comentario Por ID",
@@ -329,7 +878,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcwMjUwLCJleHAiOjE3MjUzNzA1NTB9.vmzWdhNGErYN8dLuk2gGvwX1ezCZsoaBsPL8A_UsoQU",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNjM5LCJleHAiOjE3MjUzODA5Mzl9.qQtU8pb3EPRmvlyNosZ5zbupvOkqms9PLHzKHlD8aMk",
 							"type": "string"
 						}
 					]
@@ -337,7 +886,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/comments/66d70fe0c9f1acf7fdb2fd19",
+					"raw": "http://localhost:3000/api/comments/66d7382d7479da2f19bb862c",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -346,11 +895,67 @@
 					"path": [
 						"api",
 						"comments",
-						"66d70fe0c9f1acf7fdb2fd19"
+						"66d7382d7479da2f19bb862c"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener Comentario Por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/66d7382d7479da2f19bb862c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"66d7382d7479da2f19bb862c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "438"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b6-cyBQEv0i3BepXFLSMpMpV06Cg1E\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:25:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d7382d7479da2f19bb862c\",\n    \"content\": \"Tercer Comentario de testeo!!!\",\n    \"author\": {\n        \"_id\": \"66d70d795f01426f640f2e5d\",\n        \"name\": \"Kef\",\n        \"email\": \"kef@gmail.com\",\n        \"password\": \"$2b$10$8NXQ99g/dVcaEK3/LvhXm.N7h.2DYsIah0jI8d.K6iA.yUmFQX9Ou\",\n        \"rol\": \"superadmin\",\n        \"createdAt\": \"2024-09-03T13:22:01.551Z\",\n        \"updatedAt\": \"2024-09-03T13:22:01.551Z\",\n        \"__v\": 0\n    },\n    \"reactions\": [],\n    \"createdAt\": \"2024-09-03T16:24:13.457Z\",\n    \"updatedAt\": \"2024-09-03T16:24:13.457Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Obtener Comentarios Por Autor",
@@ -360,7 +965,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcxMDc0LCJleHAiOjE3MjUzNzEzNzR9.HUpbOg8KZ4fD88wJsMy_0egexz7CbG5Y3gmmmzJDuk4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNjM5LCJleHAiOjE3MjUzODA5Mzl9.qQtU8pb3EPRmvlyNosZ5zbupvOkqms9PLHzKHlD8aMk",
 							"type": "string"
 						}
 					]
@@ -382,7 +987,64 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener Comentarios Por Autor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/author/66d70d795f01426f640f2e5d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"author",
+								"66d70d795f01426f640f2e5d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1681"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"691-t2ctAMOq6Cu2JIt/XT1ZyTcpIIg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:26:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66d70fe0c9f1acf7fdb2fd19\",\n        \"content\": \"Comentario de testeo!!!\",\n        \"author\": \"66d70d795f01426f640f2e5d\",\n        \"reactions\": [],\n        \"createdAt\": \"2024-09-03T13:32:16.169Z\",\n        \"updatedAt\": \"2024-09-03T13:44:49.077Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d711adc9f1acf7fdb2fd21\",\n        \"content\": \"Respuesta a comentario de testeo (editadoooo)\",\n        \"author\": \"66d70d795f01426f640f2e5d\",\n        \"parentComment\": \"66d70fe0c9f1acf7fdb2fd19\",\n        \"reactions\": [],\n        \"createdAt\": \"2024-09-03T13:39:57.077Z\",\n        \"updatedAt\": \"2024-09-03T13:45:24.854Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d71319c9f1acf7fdb2fd31\",\n        \"content\": \"Segundo Comentario de testeo!!!\",\n        \"author\": \"66d70d795f01426f640f2e5d\",\n        \"reactions\": [\n            {\n                \"author\": \"66d70d795f01426f640f2e5d\",\n                \"type\": \"En desacuerdo\",\n                \"_id\": \"66d716174851d2c2873ed173\",\n                \"createdAt\": \"2024-09-03T13:58:47.600Z\",\n                \"updatedAt\": \"2024-09-03T14:24:02.193Z\"\n            },\n            {\n                \"author\": \"66d70d795f01426f640f2e5d\",\n                \"type\": \"Me gusta\",\n                \"_id\": \"66d716224851d2c2873ed177\",\n                \"createdAt\": \"2024-09-03T13:58:58.370Z\",\n                \"updatedAt\": \"2024-09-03T14:27:59.123Z\"\n            },\n            {\n                \"author\": \"66d70d795f01426f640f2e5d\",\n                \"type\": \"De acuerdo\",\n                \"_id\": \"66d7162c4851d2c2873ed17c\",\n                \"createdAt\": \"2024-09-03T13:59:08.475Z\",\n                \"updatedAt\": \"2024-09-03T13:59:08.475Z\"\n            }\n        ],\n        \"createdAt\": \"2024-09-03T13:46:01.821Z\",\n        \"updatedAt\": \"2024-09-03T14:27:59.123Z\",\n        \"__v\": 4\n    },\n    {\n        \"_id\": \"66d7382d7479da2f19bb862c\",\n        \"content\": \"Tercer Comentario de testeo!!!\",\n        \"author\": \"66d70d795f01426f640f2e5d\",\n        \"reactions\": [],\n        \"createdAt\": \"2024-09-03T16:24:13.457Z\",\n        \"updatedAt\": \"2024-09-03T16:24:13.457Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66d7385f7479da2f19bb862e\",\n        \"content\": \"Respuesta al comentario de testeo\",\n        \"author\": \"66d70d795f01426f640f2e5d\",\n        \"parentComment\": \"66d7382d7479da2f19bb862c\",\n        \"reactions\": [],\n        \"createdAt\": \"2024-09-03T16:25:03.251Z\",\n        \"updatedAt\": \"2024-09-03T16:25:03.251Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Obtener Respuestas De Un Comentario",
@@ -392,7 +1054,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcwNjE4LCJleHAiOjE3MjUzNzA5MTh9._so9bN7JlpCCBQMbixWf32-a1dpNEFPEyIWd-VFyKYM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNjM5LCJleHAiOjE3MjUzODA5Mzl9.qQtU8pb3EPRmvlyNosZ5zbupvOkqms9PLHzKHlD8aMk",
 							"type": "string"
 						}
 					]
@@ -400,7 +1062,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/comments/replies/66d70fe0c9f1acf7fdb2fd19",
+					"raw": "http://localhost:3000/api/comments/replies/66d7382d7479da2f19bb862c",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -410,11 +1072,68 @@
 						"api",
 						"comments",
 						"replies",
-						"66d70fe0c9f1acf7fdb2fd19"
+						"66d7382d7479da2f19bb862c"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener Respuestas De Un Comentario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/replies/66d7382d7479da2f19bb862c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"replies",
+								"66d7382d7479da2f19bb862c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "262"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"106-1PBSqeZ02dufGAeG4hTt+hPDFmY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:27:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66d7385f7479da2f19bb862e\",\n        \"content\": \"Respuesta al comentario de testeo\",\n        \"author\": \"66d70d795f01426f640f2e5d\",\n        \"parentComment\": \"66d7382d7479da2f19bb862c\",\n        \"reactions\": [],\n        \"createdAt\": \"2024-09-03T16:25:03.251Z\",\n        \"updatedAt\": \"2024-09-03T16:25:03.251Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Actualizar Comentario",
@@ -424,7 +1143,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcxMDc0LCJleHAiOjE3MjUzNzEzNzR9.HUpbOg8KZ4fD88wJsMy_0egexz7CbG5Y3gmmmzJDuk4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwNjM5LCJleHAiOjE3MjUzODA5Mzl9.qQtU8pb3EPRmvlyNosZ5zbupvOkqms9PLHzKHlD8aMk",
 							"type": "string"
 						}
 					]
@@ -441,7 +1160,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/comments/66d711adc9f1acf7fdb2fd21",
+					"raw": "http://localhost:3000/api/comments/66d7385f7479da2f19bb862e",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -450,11 +1169,76 @@
 					"path": [
 						"api",
 						"comments",
-						"66d711adc9f1acf7fdb2fd21"
+						"66d7385f7479da2f19bb862e"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Actualizar Comentario",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"Respuesta a comentario de testeo (editadoooo)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments/66d7385f7479da2f19bb862e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"66d7385f7479da2f19bb862e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "272"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"110-Bu7eXaeftxWsC6Gh7ythLjY3e+s\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:28:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d7385f7479da2f19bb862e\",\n    \"content\": \"Respuesta a comentario de testeo (editadoooo)\",\n    \"author\": \"66d70d795f01426f640f2e5d\",\n    \"parentComment\": \"66d7382d7479da2f19bb862c\",\n    \"reactions\": [],\n    \"createdAt\": \"2024-09-03T16:25:03.251Z\",\n    \"updatedAt\": \"2024-09-03T16:28:23.356Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Eliminar Comentario",
@@ -464,7 +1248,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcxMDc0LCJleHAiOjE3MjUzNzEzNzR9.HUpbOg8KZ4fD88wJsMy_0egexz7CbG5Y3gmmmzJDuk4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwOTUwLCJleHAiOjE3MjUzODEyNTB9.keGYOC7bMgzSOVu0o8GxVYAYgVs5lwXkhIE-3wA--tU",
 							"type": "string"
 						}
 					]
@@ -472,7 +1256,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/comments/66d71323c9f1acf7fdb2fd33",
+					"raw": "http://localhost:3000/api/comments/66d7385f7479da2f19bb862e",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -481,11 +1265,67 @@
 					"path": [
 						"api",
 						"comments",
-						"66d71323c9f1acf7fdb2fd33"
+						"66d7385f7479da2f19bb862e"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Eliminar Comentario",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/66d7385f7479da2f19bb862e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"66d7385f7479da2f19bb862e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "272"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"110-Bu7eXaeftxWsC6Gh7ythLjY3e+s\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:29:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d7385f7479da2f19bb862e\",\n    \"content\": \"Respuesta a comentario de testeo (editadoooo)\",\n    \"author\": \"66d70d795f01426f640f2e5d\",\n    \"parentComment\": \"66d7382d7479da2f19bb862c\",\n    \"reactions\": [],\n    \"createdAt\": \"2024-09-03T16:25:03.251Z\",\n    \"updatedAt\": \"2024-09-03T16:28:23.356Z\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "Crear Reaccion",
@@ -495,7 +1335,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcxODQ1LCJleHAiOjE3MjUzNzIxNDV9._49GZG-kjcChSyYPpLoSUA0152NbI7z3y7DFsydTN9I",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwOTUwLCJleHAiOjE3MjUzODEyNTB9.keGYOC7bMgzSOVu0o8GxVYAYgVs5lwXkhIE-3wA--tU",
 							"type": "string"
 						}
 					]
@@ -504,7 +1344,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"commentId\" : \"66d71319c9f1acf7fdb2fd31\",\r\n    \"type\" : \"NO\"\r\n}",
+					"raw": "{\r\n    \"commentId\" : \"66d7382d7479da2f19bb862c\",\r\n    \"type\" : \"Me gusta\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -525,7 +1365,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Crear Reaccion",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentId\" : \"66d7382d7479da2f19bb862c\",\r\n    \"type\" : \"Me gusta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/reactions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reactions",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "380"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17c-MN4JJq+EE6Gn/bBqBrAGfbCLdpA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:30:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d7382d7479da2f19bb862c\",\n    \"content\": \"Tercer Comentario de testeo!!!\",\n    \"author\": \"66d70d795f01426f640f2e5d\",\n    \"reactions\": [\n        {\n            \"author\": \"66d70d795f01426f640f2e5d\",\n            \"type\": \"Me gusta\",\n            \"_id\": \"66d7399a7479da2f19bb8642\",\n            \"createdAt\": \"2024-09-03T16:30:18.164Z\",\n            \"updatedAt\": \"2024-09-03T16:30:18.164Z\"\n        }\n    ],\n    \"createdAt\": \"2024-09-03T16:24:13.457Z\",\n    \"updatedAt\": \"2024-09-03T16:30:18.165Z\",\n    \"__v\": 1\n}"
+				}
+			]
 		},
 		{
 			"name": "Obtener Reaccion Por Comentario",
@@ -535,7 +1440,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzcxODQ1LCJleHAiOjE3MjUzNzIxNDV9._49GZG-kjcChSyYPpLoSUA0152NbI7z3y7DFsydTN9I",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwOTUwLCJleHAiOjE3MjUzODEyNTB9.keGYOC7bMgzSOVu0o8GxVYAYgVs5lwXkhIE-3wA--tU",
 							"type": "string"
 						}
 					]
@@ -543,7 +1448,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/reactions/reactions/66d71319c9f1acf7fdb2fd31",
+					"raw": "http://localhost:3000/api/reactions/reactions/66d7382d7479da2f19bb862c",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -553,11 +1458,68 @@
 						"api",
 						"reactions",
 						"reactions",
-						"66d71319c9f1acf7fdb2fd31"
+						"66d7382d7479da2f19bb862c"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener Reaccion Por Comentario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/reactions/reactions/66d7382d7479da2f19bb862c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reactions",
+								"reactions",
+								"66d7382d7479da2f19bb862c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "168"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a8-BUYLZhtxFWAG18fAanNCKTC6C9o\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:31:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"author\": \"66d70d795f01426f640f2e5d\",\n        \"type\": \"Me gusta\",\n        \"_id\": \"66d7399a7479da2f19bb8642\",\n        \"createdAt\": \"2024-09-03T16:30:18.164Z\",\n        \"updatedAt\": \"2024-09-03T16:30:18.164Z\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Actualizar Reaccion",
@@ -567,7 +1529,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzczMzk5LCJleHAiOjE3MjUzNzM2OTl9.tThzbX0GED26_erTdRd64tGUqQhbOKOlUvmFGsiU49o",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwOTUwLCJleHAiOjE3MjUzODEyNTB9.keGYOC7bMgzSOVu0o8GxVYAYgVs5lwXkhIE-3wA--tU",
 							"type": "string"
 						}
 					]
@@ -576,7 +1538,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"commentId\" : \"66d71319c9f1acf7fdb2fd31\",\r\n    \"type\" : \"Me gusta\"\r\n}",
+					"raw": "{\r\n    \"commentId\" : \"66d7382d7479da2f19bb862c\",\r\n    \"type\" : \"Deacuerdo\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -584,7 +1546,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/reactions/update/66d716224851d2c2873ed177",
+					"raw": "http://localhost:3000/api/reactions/update/66d7399a7479da2f19bb8642",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -594,11 +1556,77 @@
 						"api",
 						"reactions",
 						"update",
-						"66d716224851d2c2873ed177"
+						"66d7399a7479da2f19bb8642"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Actualizar Reaccion",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentId\" : \"66d7382d7479da2f19bb862c\",\r\n    \"type\" : \"Deacuerdo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/reactions/update/66d7399a7479da2f19bb8642",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reactions",
+								"update",
+								"66d7399a7479da2f19bb8642"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "381"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17d-DnDKkV8JhOiNs9CqhDY7V2pdP18\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:32:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d7382d7479da2f19bb862c\",\n    \"content\": \"Tercer Comentario de testeo!!!\",\n    \"author\": \"66d70d795f01426f640f2e5d\",\n    \"reactions\": [\n        {\n            \"author\": \"66d70d795f01426f640f2e5d\",\n            \"type\": \"Deacuerdo\",\n            \"_id\": \"66d7399a7479da2f19bb8642\",\n            \"createdAt\": \"2024-09-03T16:30:18.164Z\",\n            \"updatedAt\": \"2024-09-03T16:32:23.340Z\"\n        }\n    ],\n    \"createdAt\": \"2024-09-03T16:24:13.457Z\",\n    \"updatedAt\": \"2024-09-03T16:32:23.340Z\",\n    \"__v\": 1\n}"
+				}
+			]
 		},
 		{
 			"name": "Eliminar Reaccion",
@@ -608,7 +1636,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzczMzk5LCJleHAiOjE3MjUzNzM2OTl9.tThzbX0GED26_erTdRd64tGUqQhbOKOlUvmFGsiU49o",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZkNzBkNzk1ZjAxNDI2ZjY0MGYyZTVkIiwiZW1haWwiOiJrZWZAZ21haWwuY29tIiwibmFtZSI6IktlZiIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI1MzgwOTUwLCJleHAiOjE3MjUzODEyNTB9.keGYOC7bMgzSOVu0o8GxVYAYgVs5lwXkhIE-3wA--tU",
 							"type": "string"
 						}
 					]
@@ -616,7 +1644,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/reactions/66d71319c9f1acf7fdb2fd31/66d716354851d2c2873ed182",
+					"raw": "http://localhost:3000/api/reactions/66d7382d7479da2f19bb862c/66d7399a7479da2f19bb8642",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -625,12 +1653,69 @@
 					"path": [
 						"api",
 						"reactions",
-						"66d71319c9f1acf7fdb2fd31",
-						"66d716354851d2c2873ed182"
+						"66d7382d7479da2f19bb862c",
+						"66d7399a7479da2f19bb8642"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Eliminar Reaccion",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/reactions/66d7382d7479da2f19bb862c/66d7399a7479da2f19bb8642",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reactions",
+								"66d7382d7479da2f19bb862c",
+								"66d7399a7479da2f19bb8642"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6-hAMpEYkWCHnokppc2zy2w/2rpm0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Sep 2024 16:33:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"66d7382d7479da2f19bb862c\",\n    \"content\": \"Tercer Comentario de testeo!!!\",\n    \"author\": \"66d70d795f01426f640f2e5d\",\n    \"reactions\": [],\n    \"createdAt\": \"2024-09-03T16:24:13.457Z\",\n    \"updatedAt\": \"2024-09-03T16:33:23.547Z\",\n    \"__v\": 1\n}"
+				}
+			]
 		}
 	]
 }
